@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW:wght@100..400&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+html{
+
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-family: "Playwrite AU NSW", cursive;
+    z-index: 1000;
+}
+
+nav, nav p, nav h1{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    color:white;
+    padding: 0.3em;
+    margin-right: 2em;
+    
+}
+nav h1{
+    font-size: 2.5em;
+}
+nav div{
+    background-color: black;
+}
+nav p{
+    justify-content: center;
+    font-size: 1.5em;
+
+}
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 2em 20% 2em 20%;
+    padding: 0.5em;
+    border-radius: 20px;
+    background-color: black;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+}
+header p {
+    text-align: center;
+    font-size: 2em;
+}
+main{
+    background-color:silver;
+    padding-bottom: 5em;
+
+}
+
+section{
+    margin: 5em 5em 0em 5em;
+    cursor:pointer;
+}
+
+
+section article{
+    background-color:antiquewhite;
+    padding: 2em;
+    display: flex;
+    justify-content:space-evenly;
+    border-radius: 20px;
+}
+section article h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+
+}
+section article p{
+    padding: 0 0 1em 0;
+    text-align: center;
+    font-size: 2.2em;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+
+}
+section article li{
+    font-size: 2em;
+    margin-left: 1em;
+    padding: 0.3em;
+}
+article img{
+    width: 50%;
+    min-height: 50vh;
+}
+section :hover {
+    border: 3px solid gray;
+}
+section article :hover {
+    border: none;
+
+}
+h2{
+    text-align:center;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+.modal-content li{
+    font-size: 1.5em;
+}
+.modal-content p{
+    font-size: 1.1em;
+}
+ul {
+    counter-reset: item;
+  }
+  li {
+    display: block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+  }
+  li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item;
+  }
+.modal-content li{
+    margin-bottom: 2em;
+}
+footer{
+    text-align: center;
+    padding: 2em;
+    background-color:black;
+    color: white;
+}
+#hidden-title{
+    text-align:center;
+}
+.bs_hp_banner { 
+    background:  url(../img/Logo.jpg);  
+    background-position: bottom;
+    background-size: cover;
+  }
+
+.bs_hp_banner a {
+    padding:0.5em;
+    border-radius: 10px;
+}
+  
+  .bs_hp_banner .overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 4em;
+    width: 100%;
+    min-height: 70vh !important;
+  } 
+  
+  .hp_banner_wrapper img {
+    min-height: unset !important;
+  }
+
+.overlay .btn_lg {
+    color: #fff;
+    background: #bd3b1a;
+    text-decoration: none;
+  	line-height: 55px !important;
+    width: 100%;
+    max-width: 400px;
+  	margin-top: 10px !important;  
+  	border: none !important;
+  	text-align: center !important;
+    margin: auto;
+}
+
+.overlay .btn_lg:hover {
+    color: #fff;
+    background: #dd4018;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; 
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 1.5em;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
+#scrollToTopBtn i {
+    font-size: 2em; /* Size of the Font Awesome icon */
+}
+.close {
+    position: fixed;
+    background-color: black;
+    border-radius: 100%;
+    padding: 1em;
+    top: 20%;
+    right: 3%; /* Adjust as needed */
+    z-index: 1020; /* Ensure it's above modal content */
+    cursor: pointer;
+    font-size: 20em;
+}
+.close:hover{
+    background: red;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fadeInModal 0.5s; /* Fade in the background */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color:antiquewhite;
+    border-radius: 20px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation: slideUp 0.5s; /* Slide up animation */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    animation: appear 1s;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes appear {
+    0% {opacity: 0; margin-top:100em; dispaly: none;}
+    100% {visibility: visible;}
+}
+@keyframes fadeInModal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(100px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes imageFade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    40% {
+        opacity: 0.3;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* 
+#image {
+    animation: imageFade 5s linear infinite;
+} */
+.mobileIMG{
+    display:none;
+}
+.pcIMG{
+    display:block;
+}
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+img#image.slide-right {
+    animation:   fadeIn 1500ms ease-out forwards;
+}
+img#image.slide-left{
+    animation: slide-left 2s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+#imageLeft{
+    margin-top: 3em;
+}
+.mobileIMG{
+    display:block;
+}
+.pcIMG{
+    display:none;
+}
+    .align_content_center h1 {
+        margin: 0;
+        font-size: 1.8em;
+        margin-top: 5em;
+    }
+    .align_content_center p{
+        display:none;
+    }
+    footer h2{
+        font-size: 1.5em;
+    }
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav div {
+        text-align: center;
+    }
+
+    .bs_hp_banner .overlay {
+        min-height: 50vh !important;
+    }
+
+    section {
+      margin: 0;
+    }
+
+    section article {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+        justify-content: center;
+        margin: 5em 0em 0em 0em;
+
+        
+    }
+    
+    section article img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    main {
+        /* padding: 10px; */
+    }
+
+    header .align_content_center {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1.5em;
+    }
+
+    .modal-content{
+        margin-top: 15rem;
+    }
+    .close{
+        margin-top: 1.5em;
+    }
+}
