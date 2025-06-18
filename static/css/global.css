@@ -142,6 +142,7 @@ footer{
     background:  url(../img/Logo.jpg);  
     background-position: bottom;
     background-size: cover;
+    margin-top: 5em;
   }
 
 .bs_hp_banner a {
@@ -405,4 +406,35 @@ img#image.slide-left{
     .close{
         margin-top: 1.5em;
     }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 12px; /* Smaller font for phones */
+  }
+ section article li {
+    font-size: 2.5em;
+ }
+ section article p{
+    font-size:3em;
+ }
+ section article h1{
+    font-size: 3.5em;
+ }
+  .nav{
+    top: 10rem;
+    padding-top: 80px;
+  }
+  .hymn {
+    line-height: 1.2;
+  }
+  .bs_hp_banner{
+    margin-top: 5rem;
+    height: 300px;
+  }
+  .modal-content li{
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 3.5em;
+  }
 }
