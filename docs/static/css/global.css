@@ -412,13 +412,13 @@ img#image.slide-left{
     font-size: 12px; /* Smaller font for phones */
   }
  section article li {
-    font-size: 2.5em;
+    font-size: 1.5em;
  }
  section article p{
-    font-size:3em;
+    font-size:2em;
  }
  section article h1{
-    font-size: 3.5em;
+    font-size: 2.5em;
  }
   .nav{
     top: 10rem;
@@ -432,9 +432,9 @@ img#image.slide-left{
     height: 300px;
   }
   .modal-content li{
-    font-size: 3em;
+    font-size: 2em;
   }
   h2 {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
 }
