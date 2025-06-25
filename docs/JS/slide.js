@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('section');
 
-    sections.forEach(section => {
+    sections.forEach((section, index) => {
+        // Only apply animation to the first section (index 0)
+        if (index !== 0) return;
+        
         const images = section.querySelectorAll('#hidden-images img');
         const displayImage = section.querySelector('img#image');
         let currentIndex = 0;

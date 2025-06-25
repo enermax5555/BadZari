@@ -13,7 +13,7 @@ var articles = document.querySelectorAll("section article");
 
 var scrollBtn = document.querySelector('#scrollToTopBtn');
 // Loop through sections and add click event to open the modal
-sections.forEach(section => {
+sections.forEach((section, index) => {
     section.addEventListener('click', function() {
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
@@ -43,10 +43,18 @@ window.onclick = function(event) {
 // Add click event listeners to each article
 articles.forEach(function(article, index) {
     article.addEventListener('click', function() {
-        // Get content based on the clicked article
-        var title = document.getElementById('hidden-title').innerText;
-        var details = document.getElementById('hidden-description').innerText;
-        var listItems = article.querySelector('#hidden-details').querySelectorAll("li");
+        // Get content based on the clicked article (first or second section)
+        var title, listItems;
+        
+        if (index === 0) {
+            // First section logic
+            title = document.getElementById('hidden-title').innerText;
+            listItems = article.querySelector('#hidden-details').querySelectorAll("li");
+        } else if (index === 1) {
+            // Second section logic
+            title = document.getElementById('hidden-title2').innerText;
+            listItems = article.querySelector('#hidden-details2').querySelectorAll("li");
+        }
 
         // Construct the modal content
         var modalContent = "<h2>" + title + "</h2>";
