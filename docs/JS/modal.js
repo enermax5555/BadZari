@@ -49,11 +49,11 @@ articles.forEach(function(article, index) {
         if (index === 0) {
             // First section logic
             title = document.getElementById('hidden-title').innerText;
-            listItems = article.querySelector('#hidden-details').querySelectorAll("li");
+            listItems = document.getElementById('hidden-details').querySelectorAll("li");
         } else if (index === 1) {
             // Second section logic
             title = document.getElementById('hidden-title2').innerText;
-            listItems = article.querySelector('#hidden-details2').querySelectorAll("li");
+            listItems = document.getElementById('hidden-details2').querySelectorAll("li");
         }
 
         // Construct the modal content
